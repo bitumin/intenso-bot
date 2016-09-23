@@ -1,7 +1,7 @@
 (function () {
     module.exports = function (robot) {
 
-        robot.respond(/¿?me toca intensiva( esta semana)?\?/i, function (res) {
+        robot.respond(/¿?(me toca|tengo) intensiva( esta semana)?\?/i, function (res) {
             var sender = res.message.user.name.toLowerCase();
             return res.reply("Hola " + sender + ", aún sé si tienes intensiva (sadpanda). Pregúntale a @durena");
         });
