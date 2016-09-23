@@ -1,13 +1,12 @@
 (function () {
     module.exports = function (robot) {
 
-        robot.respond(/[¿][ ][tengo|me toca] intensiva/i, function (res) {
-            var sender = res.message.user.name.toLowerCase()
+        robot.respond(/¿?me toca intensiva( esta semana)?\?/i, function (res) {
+            var sender = res.message.user.name.toLowerCase();
             return res.reply("Hola " + sender + ", aún sé si tienes intensiva (sadpanda). Pregúntale a @durena");
         });
 
-        robot.respond(/[¿][ ][quien|quién] [le toca|tiene] intensiva[ esta semana][\?]/i, function (res) {
-            var sender = res.message.user.name.toLowerCase()
+        robot.respond(/¿?qui[eé]n tiene intensiva( esta semana)?\?/i, function (res) {
             return res.reply("No sé aún a quién le toca intensiva esta semana. Me siento un poco inútil (sadpanda). Pero le puedes preguntar a @durena");
         });
 
@@ -39,6 +38,7 @@
         // robot.topic(function (res) {
         //     return res.send(res.message.text + "? That's a Paddlin'");
         // });
+        //
         // enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you'];
         // leaveReplies = ['Are you still there?', 'Target lost', 'Searching'];
         //
@@ -63,6 +63,7 @@
         //         return res.send("Who you calling 'slow'?");
         //     }, 60 * 1000);
         // });
+        //
         // annoyIntervalId = null;
         //
         // robot.respond(/annoy me/, function (res) {
