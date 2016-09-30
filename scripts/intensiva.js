@@ -3,13 +3,14 @@
 
         robot.respond(/¿?(me toca|tengo) intensiva( esta semana)?\?/i, function (res) {
             var sender = res.message.user.name.toLowerCase();
-            return res.reply("Hola " + sender + ", aún no sé si tienes intensiva (sadpanda). Pregúntale a @durena");
+            return res.reply("Hola " + sender + ", aún no sé si tienes intensiva. Soy un poco inútil (sadpanda).");
         });
 
         robot.respond(/¿?(quien tiene|a quién le toca|quién tiene|a quien le toca)? intensiva( esta semana)?\?/i, function (res) {
-            return res.reply("No sé aún a quién le toca intensiva esta semana. Me siento un poco inútil (sadpanda). Pero le puedes preguntar a @durena");
+            return res.reply("No sé aún a quién le toca intensiva esta semana. Me siento un poco inútil (sadpanda).");
         });
 
+        // Examples:
         // var annoyIntervalId, answer, enterReplies, leaveReplies, lulz;
         //
         // robot.hear(/badger/i, function (res) {
